@@ -1,0 +1,26 @@
+{
+  "name": "mocks",
+  "version": "1.0.0",
+  "description": "mocks lesson",
+  "main": "index.js",
+  "scripts": {
+    "test-mock": "node ./1-Mocks/index.test.js",
+    "test-stubs": "node ./2-Stubs/index.test.js",
+    "test-spies": "node ./3-Spies/index.test.js",
+    "start-e2e": "node ./4-E2E/src/api.js",
+    "test-e2e": "npx mocha ./4-E2E/*.test.js",
+    "test-e2e:dev": "npx mocha -w ./4-E2E/*.test.js",
+    "test-e2e:cov": "npx nyc npx mocha ./4-E2E/*.test.js"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "author": "Thami Vicente",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.8.2",
+    "nyc": "^15.1.0",
+    "sinon": "^15.2.0",
+    "supertest": "^6.3.4"
+  }
+}

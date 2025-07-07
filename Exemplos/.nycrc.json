@@ -8,6 +8,6 @@
     "html",
     "text"
   ],
-  "report-dir": "./Exemplos/4-E2E/nyc/coverage",
-  "temp-dir": "./Exemplos/4-E2E/nyc/.nyc_output"
+  "report-dir": "./4-E2E/nyc/coverage",
+  "temp-dir": "./4-E2E/nyc/.nyc_output"
 }

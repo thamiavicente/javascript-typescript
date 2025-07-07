@@ -4,35 +4,35 @@ const assert = require('assert')
 
 ;(async () => {
     {
-        const filePath = './Exemplos/1-Mocks/files/error-more-than-one.json'
+        const filePath = './1-Mocks/files/error-more-than-one.json'
         const expected = new Error(errorMessage.ERROR_MORE_THAN_ONE_USER)
         const result = File.validateFile(filePath)
         await assert.rejects(result, expected)
     }
 
     {
-        const filePath = './Exemplos/1-Mocks/files/error-empty.json'
+        const filePath = './1-Mocks/files/error-empty.json'
         const expected = new Error(errorMessage.ERROR_MISSING_ATRIBUTE)
         const result = File.validateFile(filePath)
         await assert.rejects(result, expected)
     }
 
     {
-        const filePath = './Exemplos/1-Mocks/files/error-missing-atribute.json'
+        const filePath = './1-Mocks/files/error-missing-atribute.json'
         const expected = new Error(errorMessage.ERROR_MISSING_ATRIBUTE)
         const result = File.validateFile(filePath)
         await assert.rejects(result, expected)
     }
 
     {
-        const filePath = './Exemplos/1-Mocks/files/error-under-age.json'
+        const filePath = './1-Mocks/files/error-under-age.json'
         const expected = new Error(errorMessage.ERROR_USER_UNDER_AGE)
         const result = File.validateFile(filePath)
         await assert.rejects(result, expected)
     }
 
     {
-        const filePath = './Exemplos/1-Mocks/files/valid-user.json'
+        const filePath = './1-Mocks/files/valid-user.json'
         const expected = {
             valid: true,
             message: 'Parabéns, seu arquivo é válido!'
