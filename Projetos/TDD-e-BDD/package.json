@@ -14,8 +14,9 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@faker-js/faker": "^9.9.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
