@@ -1,0 +1,1 @@
+{"processes":{"05380694-400a-4348-aafc-a633cd957fc5":{"parent":null,"children":["fc0dc5c2-3c60-4958-aa4c-0169cd004082"]},"fc0dc5c2-3c60-4958-aa4c-0169cd004082":{"parent":"05380694-400a-4348-aafc-a633cd957fc5","children":[]}},"files":{"/home/thamiris/Desktop/cursos/js-expert/Testes-em-Javascript/4-E2E/src/api.js":["fc0dc5c2-3c60-4958-aa4c-0169cd004082"]},"externalIds":{}}
