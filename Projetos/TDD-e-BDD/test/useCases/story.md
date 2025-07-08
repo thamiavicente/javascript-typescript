@@ -20,7 +20,7 @@ In order to calculate the final renting price
 
 Given a customer who wants to rent a car for 5 days
 
-And he is 50 years old
+And he is 27 years old
 
 When he chooses a car category that costs $37.6 per day
 
