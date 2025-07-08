@@ -18,6 +18,8 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 |[mocha](https://mochajs.org/)|10|
 |[supertest](https://github.com/ladjs/supertest#readme)|6|
 |[istanbul (nyc)](https://istanbul.js.org/)|15|
+|[fakerjs](https://fakerjs.dev/)|9|
+|[chaijs](https://www.chaijs.com)|4|
 
 # Conclusão
 

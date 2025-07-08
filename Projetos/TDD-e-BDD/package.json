@@ -9,8 +9,9 @@
     "node": "18"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node ./seed"
+    "seed": "node ./seed",
+    "test": "npx mocha -w --parallel ./test/**/*.test.js",
+    "test:cov": "npx nyc npx mocha --parallel ./test/**/*.test.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +19,11 @@
     "@faker-js/faker": "^9.9.0"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
+  }
 }

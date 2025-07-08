@@ -1,0 +1,16 @@
+[
+    {
+        "id": "69a25216-8eac-4d07-aedd-89c9fffb9755",
+        "name": "Cruze",
+        "releaseYear": 2025,
+        "available": true,
+        "gasAvailable": true
+    },
+    {
+        "id": "3d1cadec-61e2-4ff1-beb4-c024a5c752a9",
+        "name": "911",
+        "releaseYear": 2024,
+        "available": true,
+        "gasAvailable": true
+    }
+]
