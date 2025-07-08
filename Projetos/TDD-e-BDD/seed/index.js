@@ -8,13 +8,13 @@ const Car = require('../src/entities/car')
 const CarCategory = require('../src/entities/carCategory')
 const Customer = require('../src/entities/customer')
 
-const ITEMS_AMOUNT = 2
+const ITEMS_AMOUNT = 3
 
 const carCategory = new CarCategory({
     id: faker.string.uuid(),
     name: faker.vehicle.type(),
     carIds: [],
-    price: faker.finance.amount(20, 100)
+    price: faker.finance.amount({ min: 20, max: 100 })
 })
 
 const cars = []
@@ -42,6 +42,6 @@ const write = (filename, data) => writeFile(join(seederBaseFolder, filename), JS
 
 ;(async () => {
     await write('cars.json', cars)
-    await write('car-category.json', [carCategory])
-    await write('customer.json', customers)
+    await write('carCategories.json', [carCategory])
+    await write('customers.json', [...customers])
 })()

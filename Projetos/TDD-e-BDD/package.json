@@ -10,6 +10,7 @@
   },
   "scripts": {
     "seed": "node ./seed",
+    "start": "node ./src/api",
     "test": "npx mocha -w --parallel ./test/**/*.test.js",
     "test:cov": "npx nyc npx mocha --parallel ./test/**/*.test.js"
   },
@@ -24,6 +25,7 @@
     "chai": "^4.5.0",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.4"
+    "sinon": "^9.2.4",
+    "supertest": "^6.3.4"
   }
 }

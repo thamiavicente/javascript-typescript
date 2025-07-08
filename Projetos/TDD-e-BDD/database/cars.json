@@ -1,14 +1,21 @@
 [
     {
-        "id": "69a25216-8eac-4d07-aedd-89c9fffb9755",
-        "name": "Cruze",
+        "id": "210b3f39-d6e4-4cdf-92bd-c4b2b848c49a",
+        "name": "Explorer",
+        "releaseYear": 2024,
+        "available": true,
+        "gasAvailable": true
+    },
+    {
+        "id": "311b0d10-e4be-4208-9fe1-7a360f3c2b96",
+        "name": "Fiesta",
         "releaseYear": 2025,
         "available": true,
         "gasAvailable": true
     },
     {
-        "id": "3d1cadec-61e2-4ff1-beb4-c024a5c752a9",
-        "name": "911",
+        "id": "764ed635-c50b-466b-ae8c-733c4c4a9529",
+        "name": "Altima",
         "releaseYear": 2024,
         "available": true,
         "gasAvailable": true
