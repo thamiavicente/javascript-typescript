@@ -1,5 +1,4 @@
 const http = require("http")
-const { once } = require('events')
 
 const DataBaseFactory = require('../entities/factory/dataBaseFactory.js')
 const CarService = require('../service/carService.js')
@@ -16,42 +15,73 @@ curl -X POST localhost:5000/rent \
 */
 
 class Api {
-    constructor() {
-        const dataBase = new DataBaseFactory()
-
-        this.carService = new CarService({ cars: dataBase.cars })
-        this.customerService = new CustomerService({ customers: dataBase.customers })
-        this.carCategoryService = new CarCategoryService({ carCategories: dataBase.carCategories })
+    constructor(dependencies = new DataBaseFactory()) {
+        this.carService = new CarService({ cars: dependencies.cars })
+        this.customerService = new CustomerService({ customers: dependencies.customers })
+        this.carCategoryService = new CarCategoryService({ carCategories: dependencies.carCategories })
     }
 
     getRouteList() {
         return {
             '/rent:post': async (request, response) => {
-                try {
-                    const { customer, carCategory, numberOfDays } = JSON.parse(await once(request, "data"))
-            
-                    const customerFounded = await this.customerService.findCustomer(customer)
-                    const carCategoryFounded = await this.carCategoryService.findCarCategory(carCategory)
-            
-                    const transition = await this.carService.rent(customerFounded, carCategoryFounded, numberOfDays)
-            
-                    console.log('200 - Success')
-                    response.writeHead(200, DEFAULT_HEADER)
-                    response.end(JSON.stringify(transition))
-                } catch(error) {
-                    console.error(error)
-                    response.writeHead(500, DEFAULT_HEADER)
-                    response.end('Got error on renting car')
+                for await (const data of request) {
+                    try {
+                        const { customer, carCategory, numberOfDays } = JSON.parse(data)
+                
+                        //const customerFounded = await this.customerService.findCustomer(customer)
+                        //const carCategoryFounded = await this.carCategoryService.findCarCategory(carCategory)
+                        //If the user is searched in the data base, we can not use mocks
+                
+                        const transition = await this.carService.rent(customer, carCategory, numberOfDays)
+
+                        console.log('200 - Success on renting car')
+                        response.writeHead(200, DEFAULT_HEADER)
+                        response.write(JSON.stringify({transition}))
+                        response.end()
+                    } catch(error) {
+                        console.error(error)
+                        response.writeHead(500, DEFAULT_HEADER)
+                        response.end('Got error on renting car')
+                    }
                 }
             },
         
-            /* '/calculateFinalPrice:post': (request, response) => {
-                return null
+            '/calculateFinalPrice:post': async (request, response) => {
+                for await (const data of request) {
+                    try {
+                        const { customer, carCategory, numberOfDays } = JSON.parse(data)
+
+                        const finalPrice = await this.carService.calculateFinalPrice(customer, carCategory, numberOfDays)
+
+                        console.log('200 - Success on calculating price')
+                        response.writeHead(200, DEFAULT_HEADER)
+                        response.write(JSON.stringify({ finalPrice }))
+                        response.end()
+                    } catch(error) {
+                        console.error(error)
+                        response.writeHead(500, DEFAULT_HEADER)
+                        response.end('Got error on calculating price')
+                    }
+                }
             },
         
-            'getAvailableCar:post': (request, response) => {
-                return null
-            },*/
+            '/getAvailableCar:post': async (request, response) => {
+                for await(const data of request) {
+                    try {
+                        const { carCategory } = JSON.parse(data)
+                        const car = await this.carService.getAvailableCar(carCategory)
+
+                        console.log('200 - Success on getting available car')
+                        response.writeHead(200, DEFAULT_HEADER)
+                        response.write(JSON.stringify({ car }))
+                        response.end()
+                    } catch (error) {
+                        console.log(error)
+                        response.writeHead(500, DEFAULT_HEADER)
+                        response.end('Got error on getting available car')
+                    }
+                }
+            },
         
             default: (request, response) => {
                 response.writeHead(404)
@@ -62,7 +92,7 @@ class Api {
 
     handler(request, response) {
         const { url, method } = request
-        const routeKey = `${url.toLowerCase()}:${method.toLowerCase()}`
+        const routeKey = `${url}:${method.toLowerCase()}`
         const routes = this.getRouteList()
         const routeChosen = routes[routeKey] || routes.default
         return routeChosen(request, response)
@@ -80,4 +110,4 @@ if (process.env.NODE_ENV !== 'test') {
     api.initializeServer()
 }
 
-module.exports = Api
+module.exports = (dependencies) => new Api(dependencies)
