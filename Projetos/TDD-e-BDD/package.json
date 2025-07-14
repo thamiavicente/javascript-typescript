@@ -11,8 +11,9 @@
   "scripts": {
     "seed": "node ./seed",
     "start": "node ./src/api",
-    "test": "npx mocha -w --parallel ./test/**/*.test.js",
-    "test:cov": "npx nyc npx mocha --parallel ./test/**/*.test.js"
+    "test": "NODE_ENV=test npx mocha -w --parallel ./test/**/*.test.js",
+    "test:cov": "NODE_ENV=test npx nyc npx mocha --exit --parallel ./test/**/*.test.js",
+    "test:dev": "NODE_ENV=test npx mocha -w --parallel **/**/*.test.js"
   },
   "author": "",
   "license": "ISC",
