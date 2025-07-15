@@ -14,7 +14,7 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - [Conceitos](https://github.com/thamiavicente/javascript-typescript/blob/main/Conceitos)
 - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Testes-em-Javascript)
 - [Projetos](https://github.com/thamiavicente/javascript-typescript/tree/main/Projetos)
-    -[TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
+    - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
 - [Conclusão](#conclusão)
 - [Certificado](#certificado)
 
