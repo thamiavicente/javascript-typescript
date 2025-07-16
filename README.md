@@ -19,7 +19,7 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - [Bibliotecas e dependências](#bibliotecas-e-dependências)
 - [Conceitos](https://github.com/thamiavicente/javascript-typescript/blob/main/Conceitos)
 - Capítulos do curso:
-    - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Conteudos-do-curso/Testes-em-Javascript)
+    - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Capitulos-do-curso/Testes-em-Javascript)
 - Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
 - [Conclusão](#conclusão)
