@@ -1,4 +1,7 @@
 # Testes
+
+## [Projeto final](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
+
 ## Instruções
 Para rodar os testes presentes nesse projeto, basta fazer o clone do repositório e rodar o comando especificado no tópico.
 

@@ -23,6 +23,8 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
     - [Ciclos de vida do Javascript](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Ciclos-de-Vida)
 - Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
+    - [ES Modules](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/ESModules)
+- [Typescript](https://github.com/thamiavicente/javascript-typescript/blob/main/Typescript)
 - [Conclusão](#conclusão)
 - [Certificado](#certificado)
 
