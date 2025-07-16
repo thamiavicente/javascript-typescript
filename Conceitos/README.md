@@ -77,33 +77,6 @@ Já os métodos estáticos, ou static methods, fazem parte diretamente da classe
 ### IIFE (Immediately Invoked Function Expression)
 Um função que é definida e executada imediatamente após sua criação. (() => {...})();
 
-### Modos de importação e exportação no JS:
-#### Module.export
-  - Usado no Node.js
-  - Anterior ao suporte nativo de ESModules
-  - Export:
-    ``` javascript
-        const saudacao = () => 'Olá!';
-        module.exports = saudacao;
-    ```
-    - Import:
-    ``` javascript
-        const saudacao = require('./arquivo');
-        console.log(saudacao());
-    ```
-#### Export
-  - Usado em navegadores e também no Node.js com "type": "module" no package.json
-  - Export:
-  ``` javascript
-      export default function saudacao() {
-          return 'Olá!';
-      }
-  ```
-  - Import
-  ``` javascript
-      import saudacao from './arquivo.js';
-  ```
-
 ### generator
 É uma função que pode ser executada em partes, ou seja, pausar e continuar a execução de onde parou, permitindo que os valores sejam produzidos por demanda.
   - O generator é criado usando * e yield
