@@ -20,6 +20,7 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - [Conceitos](https://github.com/thamiavicente/javascript-typescript/blob/main/Conceitos)
 - Capítulos do curso:
     - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Capitulos-do-curso/Testes-em-Javascript)
+    - [Ciclos de vida do Javascript](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Ciclos-de-Vida)
 - Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
 - [Conclusão](#conclusão)
