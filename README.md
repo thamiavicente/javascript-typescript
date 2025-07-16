@@ -1,19 +1,15 @@
 # Javascript & Typescript
 
 ## Introdução
-Este projeto tem por finalidade compilar e compartilhar o aprendizado obtido no curso "JS Expert", ministrado por Erick Wendel, servindo como guia para quem quer aprender mais sobre JavaScript, mas não sabe por onde começar.
+Este projeto tem por finalidade compilar e compartilhar o aprendizado obtido no curso "JS Expert", ministrado por Erick Wendel, mas como considero este repositório meu compilado de aprendizagem, também incluí (e seguirei incluindo) conceitos que não foram vistos no curso, como todo o conteúdo relacionado a TypeScript.
 
-Aqui, você encontra meu caderno de anotações sobre JavaScript e TypeScript, reunindo conhecimentos importantes sobre a linguagem de forma resumida e prática, com exemplos inspirados no curso, mas feitos por mim.
+Entenda mais sobre testes, ciclos de vida, regex e muito mais, de forma resumida, organizada e com exemplos práticos para facilitar seus estudos de JavaScript e TypeScript. Além disso, você encontra meu caderno de anotações reunindo conhecimentos importantes sobre a linguagem de forma resumida e prática, servindo como guia para quem quer aprender mais sobre JavaScript, mas não sabe por onde começar. M
 
 A organização do repositório está dividida em:
 
-- Conceitos: anotações gerais de pontos estudados no curso e outros que tive curiosidade durante os estudos
-- Capítulos do curso: exemplos e explicações de conceitos específicos
-- Projetos: onde estão os projetos práticos feitos durante o curso
-
-Como considero este repositório meu compilado de aprendizagem, também incluí (e seguirei incluindo) conceitos que não foram vistos no curso, como todo o conteúdo relacionado a TypeScript.
-
-Entenda mais sobre testes, ciclos de vida, regex e muito mais, de forma resumida, organizada e com exemplos práticos para facilitar seus estudos de JavaScript e TypeScript.
+- **Conceitos:** anotações gerais de pontos estudados no curso e outros que tive curiosidade durante os estudos
+- **Capítulos do curso:** exemplos e explicações de conceitos específicos
+- **Projetos:** onde estão os projetos práticos feitos durante o curso
 
 Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 
