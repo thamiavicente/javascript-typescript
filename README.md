@@ -45,7 +45,7 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 |[chalk-table](https://github.com/lordkrieg/chalk-table)|1|
 |[draftlog](https://github.com/ivanseidel/node-draftlog)|1|
 |[nodemon](https://nodemon.io/)|3|
-|[reify](https://github.com/benjamn/reify)|0.2|
+|[c8](https://github.com/bcoe/c8)|10|
 
 ## Conclusão
 
