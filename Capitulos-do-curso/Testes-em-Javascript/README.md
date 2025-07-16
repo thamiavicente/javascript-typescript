@@ -3,7 +3,7 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 
 **Exemplo:** Rodar testes de mock
 1. Clone o repositório
-2. Abra o diretório raiz do projeto no terminal
+2. Abra o diretório raiz do projeto no terminal (/Capitulos-do-curso/Testes-em-Javascript)
 3. Rode o comando abaixo no terminal
    ``` javascript
    npm run test-mocks
