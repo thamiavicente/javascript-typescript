@@ -1,9 +1,19 @@
 # Javascript & Typescript
 
 ## Introdução
-Esse projeto tem por finalidade trazer um resumo do aprendizado obtido do curso "JS Expert", ministrado por Erick Wendel, e serve como um guia para quem quer aprender um pouco mais sobre JS, mas não tem ideia de por onde começar.
+Este projeto tem por finalidade compilar e compartilhar o aprendizado obtido no curso "JS Expert", ministrado por Erick Wendel, servindo como guia para quem quer aprender mais sobre JavaScript, mas não sabe por onde começar.
 
-Entenda mais sobre assuntos como testes, ciclos de vida, regex e muito mais, de forma resumida e com exemplos inspirados no curso, mas feitos por mim.
+Aqui, você encontra meu caderno de anotações sobre JavaScript e TypeScript, reunindo conhecimentos importantes sobre a linguagem de forma resumida e prática, com exemplos inspirados no curso, mas feitos por mim.
+
+A organização do repositório está dividida em:
+
+- Conceitos: anotações gerais de pontos estudados no curso e outros que tive curiosidade durante os estudos
+- Capítulos do curso: exemplos e explicações de conceitos específicos
+- Projetos: onde estão os projetos práticos feitos durante o curso
+
+Como considero este repositório meu compilado de aprendizagem, também incluí (e seguirei incluindo) conceitos que não foram vistos no curso, como todo o conteúdo relacionado a TypeScript.
+
+Entenda mais sobre testes, ciclos de vida, regex e muito mais, de forma resumida, organizada e com exemplos práticos para facilitar seus estudos de JavaScript e TypeScript.
 
 Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 
@@ -12,8 +22,9 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - [Instruções](#instruções)
 - [Bibliotecas e dependências](#bibliotecas-e-dependências)
 - [Conceitos](https://github.com/thamiavicente/javascript-typescript/blob/main/Conceitos)
-- [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Testes-em-Javascript)
-- [Projetos](https://github.com/thamiavicente/javascript-typescript/tree/main/Projetos)
+- Capítulos do curso:
+    - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Testes-em-Javascript)
+- Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
 - [Conclusão](#conclusão)
 - [Certificado](#certificado)
