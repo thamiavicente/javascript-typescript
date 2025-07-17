@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "npx nodemon --ignore database.json --exec node --experimental-json-modules src/index.js",
-    "test": "npx mocha -w --parallel ./test/**/*.test.js",
-    "test:cov": "npx c8 npx mocha --parallel ./test/**/*.test.js"
+    "test:unit": "NODE_ENV=test npx mocha -w --parallel ./test/unit-test/*.test.js",
+    "test:e2e": "NODE_ENV=test npx mocha -w --parallel ./test/e2e-test/*.test.js",
+    "test:cov": "NODE_ENV=test npx c8 npx mocha --parallel ./test/**/*.test.js"
   },
   "author": "",
   "license": "ISC",
