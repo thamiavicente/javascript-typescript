@@ -128,9 +128,6 @@ Já o process é um objeto global do Node que representa o processo em execuçã
 - obter informações de uso de memória,
 - além de conter métodos como process.nextTick(), que agenda funções para serem executadas antes de qualquer I/O assíncrono, até mesmo antes de setImmediate.
 
-## Regex
-São padrões usados para analisar, buscar, validar ou manipular strings com base em regras específicas. Elas permitem encontrar partes de texto que seguem um formato (ex.: e-mails, datas, números) sem precisar percorrer manualmente cada caracter.
-
 ## Objeto
 Em JavaScript, um objeto é uma estrutura de dados que armazena pares chave-valor, onde as chaves são strings ou symbols e os valores podem ser de qualquer tipo. Objetos são amplamente usados para estruturar dados e representar entidades no código, permitindo fácil acesso e modificação das propriedades por chave.
 ```javascript

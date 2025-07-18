@@ -21,6 +21,8 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - Capítulos do curso:
     - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Capitulos-do-curso/Testes-em-Javascript)
     - [Ciclos de vida do Javascript](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Ciclos-de-Vida)
+    - [Advanced Javascript Data Types](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Advanced-Javascript-Data-Types)
+    - [Regex](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Regex)
 - Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
     - [ES Modules](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/ESModules)
