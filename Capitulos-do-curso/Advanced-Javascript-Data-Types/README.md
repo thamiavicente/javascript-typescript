@@ -99,6 +99,38 @@ set1.keys() //[Set Iterator] { 'item1', 'item2', 'item3' }
 ### Weakset
 Assim como o Map, o Set possui uma versão mais leve, o WeakSet, que contém menos métodos disponíveis e armazena apenas objetos, permitindo que eles sejam coletados pelo garbage collector caso não estejam mais em uso em outras partes do código.
 
+## Reflect
+Reflect é um objeto global com métodos estáticos que facilitam operações sobre objetos de forma mais segura, semântica e consistente. Ele serve como uma API padronizada para executar operações de baixo nível em objetos, como definir ou deletar propriedades, chamar funções ou interceptar protótipos, através de métodos como Reflect.deleteProperty, Reflect.get, Reflect.set, entre outros, permitindo manipular propriedades de objetos sem os efeitos colaterais que podem ocorrer com operadores tradicionais como delete. Por exemplo, ao usar delete, há impacto potencial na otimização de performance do motor JavaScript, pois a exclusão de propriedades pode desestruturar a forma como o motor organiza a memória e os acessos internos do objeto. Com Reflect.deleteProperty, a operação é semântica e retorna true ou false explicitamente, facilitando o tratamento de erros e tornando o código mais previsível. Além disso, Reflect é frequentemente usado em conjunto com Proxy, pois permite delegar operações padrão (get, set, deleteProperty, etc.) de forma limpa. Assim, evita efeitos colaterais inesperados quando você intercepta operações com um Proxy.
+
+## Proxy e Observer
+Proxy são objetos que permitem interceptar e redefinir operações realizadas em outro objeto (target), funcionando como um “observador ativo” para leitura, escrita ou chamadas de função, permitindo modificar ou validar dados em tempo real. Dois dos handlers mais comuns no Proxy são o `.get()` e o `.set()`. Os argumentos passados a essas funções seguem esta ordem:
+- **target:** o objeto alvo observado pelo Proxy,
+- **propertyKey:** a chave da propriedade sendo acessada ou modificada,
+- **value:** (apenas no `.set()`) o novo valor a ser atribuído,
+- **receiver:** quem iniciou a operação, geralmente o próprio Proxy.
+
+É importante notar que, diferente de um padrão Observer tradicional, o Proxy não notifica múltiplos ouvintes de forma reativa — ele intercepta e controla a ação imediatamente, enquanto o Observer é um padrão de design que permite registrar múltiplos “assinantes” para serem notificados quando algo mudar. Ou seja:
+- **Proxy:** intercepta diretamente a ação (leitura, escrita) — é um guardião.
+- **Observer:** avisa outras partes do sistema quando algo mudou — é um mensageiro.
+Eles podem ser usados juntos: por exemplo, um Proxy pode emitir eventos de Observer sempre que detecta mudanças.
+
+## Node timers
+- **setImmediate:** agenda a execução de uma função após a fase atual do loop de eventos, sendo executada antes de setTimeout com 0ms em muitos casos. Útil para executar funções imediatamente após a conclusão de I/O ou operações síncronas pesadas sem bloquear o restante da execução.
+- **setTimeout:** executa uma função uma única vez após um tempo especificado em milissegundos, sendo amplamente usado para agendamento simples de tarefas assíncronas.
+- **setInterval:** executa uma função repetidamente em intervalos de tempo específicos até que seja explicitamente cancelado, ideal para tarefas periódicas como checagem de estados ou requisições contínuas.
+
+### Process
+Já o process é um objeto global do Node que representa o processo em execução. Ele oferece controle de baixo nível sobre o ciclo de vida da aplicação, como:
+- permite ler variáveis de ambiente `process.env`,
+- manipular argumentos de linha de comando,
+- lidar com eventos do loop de eventos,
+- emitir sinais de encerramento,
+- obter informações de uso de memória,
+- além de conter métodos como process.nextTick(), que agenda funções para serem executadas antes de qualquer I/O assíncrono, até mesmo antes de setImmediate.
+
+## Regex
+São padrões usados para analisar, buscar, validar ou manipular strings com base em regras específicas. Elas permitem encontrar partes de texto que seguem um formato (ex.: e-mails, datas, números) sem precisar percorrer manualmente cada caracter.
+
 ## Objeto
 Em JavaScript, um objeto é uma estrutura de dados que armazena pares chave-valor, onde as chaves são strings ou symbols e os valores podem ser de qualquer tipo. Objetos são amplamente usados para estruturar dados e representar entidades no código, permitindo fácil acesso e modificação das propriedades por chave.
 ```javascript
