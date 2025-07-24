@@ -1,0 +1,23 @@
+[
+    {
+        "id": "210b3f39-d6e4-4cdf-92bd-c4b2b848c49a",
+        "name": "Explorer",
+        "releaseYear": 2024,
+        "available": true,
+        "gasAvailable": true
+    },
+    {
+        "id": "311b0d10-e4be-4208-9fe1-7a360f3c2b96",
+        "name": "Fiesta",
+        "releaseYear": 2025,
+        "available": true,
+        "gasAvailable": true
+    },
+    {
+        "id": "764ed635-c50b-466b-ae8c-733c4c4a9529",
+        "name": "Altima",
+        "releaseYear": 2024,
+        "available": true,
+        "gasAvailable": true
+    }
+]
