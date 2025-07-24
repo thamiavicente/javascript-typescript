@@ -1,3 +1,4 @@
+'use strict';
 const { faker } = require('@faker-js/faker')
 
 const { join } = require('path')

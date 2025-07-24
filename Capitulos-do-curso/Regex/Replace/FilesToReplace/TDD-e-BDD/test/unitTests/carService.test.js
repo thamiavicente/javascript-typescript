@@ -1,3 +1,4 @@
+'use strict';
 const { describe, it, before, beforeEach, afterEach } = require('mocha')
 const { join } = require('path')
 const { expect } = require('chai')

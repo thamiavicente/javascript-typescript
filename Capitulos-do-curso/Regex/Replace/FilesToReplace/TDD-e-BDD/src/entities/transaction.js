@@ -1,3 +1,4 @@
+'use strict';
 class Transaction {
     constructor({ customer, car, dueDate, totalPrice }) {
         this.customer = customer

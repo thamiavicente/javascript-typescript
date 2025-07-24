@@ -1,3 +1,4 @@
+'use strict';
 const Base = require("./base/base.js")
 
 class Car extends Base {

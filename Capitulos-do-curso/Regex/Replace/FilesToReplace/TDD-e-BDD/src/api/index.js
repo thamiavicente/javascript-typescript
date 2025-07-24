@@ -1,3 +1,4 @@
+'use strict';
 const http = require("http")
 
 const DataBaseFactory = require('../entities/factory/dataBaseFactory.js')

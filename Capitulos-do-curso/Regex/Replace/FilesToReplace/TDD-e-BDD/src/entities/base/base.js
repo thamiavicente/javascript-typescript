@@ -1,3 +1,4 @@
+'use strict';
 class Base {
     constructor({id, name}) {
         this.id = id
