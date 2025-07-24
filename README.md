@@ -48,6 +48,7 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 |[draftlog](https://github.com/ivanseidel/node-draftlog)|1|
 |[nodemon](https://nodemon.io/)|3|
 |[c8](https://github.com/bcoe/c8)|10|
+|[ipt](https://github.com/ruyadorno/ipt)|3|
 
 ## Conclusão
 
