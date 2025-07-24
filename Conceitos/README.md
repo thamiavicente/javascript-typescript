@@ -53,6 +53,47 @@ Um função que é definida e executada imediatamente após sua criação. (() =
 - Pode ser levemente mais performático em laços muito longos por eliminar a necessidade de iteradores.
 - Útil para iterações que precisam do índice, por exemplo:
 
+### Escopo de funções
+#### Regular Function
+- O this depende de como a função é chamada, sendo dinâmico:
+- No browser em modo não estrito, this dentro de funções globais é o window.
+- No modo estrito ('use strict'), é undefined.
+- Quando chamada como método de objeto, this referencia o objeto que chamou.
+```javascript
+const obj = {
+  name: 'Alice',
+  showName: function() {
+    console.log(this.name);
+  }
+};
+
+obj.showName(); // 'Alice'
+//Aqui this aponta para obj porque obj está chamando showName.
+```
+
+#### Arrow Function
+- O this de uma arrow function é léxico:
+- Ele não cria seu próprio this.
+- Herda o this do escopo em que foi definido.
+```javascript
+const obj = {
+  name: 'Alice',
+  showName: () => {
+    console.log(this.name);
+  }
+};
+
+obj.showName(); // undefined
+// Aqui this não é obj, mas sim o this do escopo em que obj foi definido (no browser, window; em módulo, geralmente undefined).
+```
+
+|Aspecto|Regular Function|Arrow Function|
+|-|-|-|
+|this|Dinâmico, depende de quem chama|Léxico, herdado do escopo|
+|Cria this próprio?|Sim|Não|
+|Útil para métodos de objeto?|Sim|Cuidado, geralmente não recomendado|
+|Útil para callbacks que precisam de this externo?|Precisa de .bind para manter this|Sim, usa this externo automaticamente|
+
 ## Bibliotecas
 ### assert
 É um módulo que valida se determinada condição é verdadeira, caso não seja, retorna um erro.
