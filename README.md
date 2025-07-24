@@ -26,6 +26,7 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
     - [ES Modules](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/ESModules)
+    - [Regex](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/Regex)
 - [Typescript](https://github.com/thamiavicente/javascript-typescript/blob/main/Typescript)
 - [Conclusão](#conclusão)
 - [Certificado](#certificado)
@@ -49,6 +50,7 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 |[nodemon](https://nodemon.io/)|3|
 |[c8](https://github.com/bcoe/c8)|10|
 |[ipt](https://github.com/ruyadorno/ipt)|3|
+|[pdf-paser](https://gitlab.com/autokent/pdf-parse)|1|
 
 ## Conclusão
 
