@@ -132,6 +132,9 @@ Em JavaScript, um objeto é uma estrutura de dados que armazena pares chave-valo
 ```javascript
 const actor = { item: 1, valor: 2 };
 ```
+### Private element
+São criados com o perfixo `#` e não podem ser referenciados fora da classe onde foram criadas.
+[Private element - documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements)
 
 ## Array
 O Array dentro do contexto JavaScript é uma maneira de guardar uma coleção de dados sob uma mesma variável. Esses dados podem posteriormente serem acessados pelo seu index, e modificados a partir de métodos da classe Array e do objeto instanciado.
