@@ -45,12 +45,13 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 |[fakerjs](https://fakerjs.dev/)|9|
 |[chaijs](https://www.chaijs.com)|4|
 |[chalk](https://github.com/chalk/chalk)|4|
-|[chalk-table](https://github.com/lordkrieg/chalk-table)|1|
+|[chalk table](https://github.com/lordkrieg/chalk-table)|1|
 |[draftlog](https://github.com/ivanseidel/node-draftlog)|1|
 |[nodemon](https://nodemon.io/)|3|
 |[c8](https://github.com/bcoe/c8)|10|
 |[ipt](https://github.com/ruyadorno/ipt)|3|
-|[pdf-paser](https://gitlab.com/autokent/pdf-parse)|1|
+|[pdf paser](https://gitlab.com/autokent/pdf-parse)|1|
+|[safe regex](https://github.com/davisjam/safe-regex)|2|
 
 ## Conclusão
 
