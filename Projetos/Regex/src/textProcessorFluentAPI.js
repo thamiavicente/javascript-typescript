@@ -1,4 +1,5 @@
 const { evaluateRegex } = require('./utils.js')
+const Person = require('./person.js')
 class TextProcessorFluentAPI {
 
     #content
@@ -23,6 +24,11 @@ class TextProcessorFluentAPI {
     removeEmptySpace() {
         const trimSpaceRegex = evaluateRegex(/^\s+|\s+$|\n/g)
         this.#content = this.#content.map(line => line.map(subline => subline.replace(trimSpaceRegex, "")))
+        return this
+    }
+
+    mapPerson() {
+        this.#content = this.#content.map(line => new Person(line))
         return this
     }
 
