@@ -94,6 +94,19 @@ obj.showName(); // undefined
 |Útil para métodos de objeto?|Sim|Cuidado, geralmente não recomendado|
 |Útil para callbacks que precisam de this externo?|Precisa de .bind para manter this|Sim, usa this externo automaticamente|
 
+### replace
+O `replace` pode ser usado com uma callback que recebe:
+- fullmatch: a string inteira
+- groups: as subdivisões da string
+- index
+```javascript
+let string = "abcdecfg"
+const stringDivision = /^(\w.*)c(\w.*)c(\w.*)$/g
+string.replace(stringDivision, (fullMatch, group1, group2, group3, index) => {
+  return `initial: ${fullMatch}, g1: ${group1}, g2: ${group2}, g3: ${group3}, index: ${index}`
+})
+```
+
 ## Bibliotecas
 ### assert
 É um módulo que valida se determinada condição é verdadeira, caso não seja, retorna um erro.
