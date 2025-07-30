@@ -2,7 +2,7 @@
 São padrões usados para analisar, buscar, validar ou manipular strings com base em regras específicas. Elas permitem encontrar partes de texto que seguem um formato (ex.: e-mails, datas, números) sem precisar percorrer manualmente cada caracter.
 Você pode usar o site [Regex 101](https://regex101.com/) para validar suas Regex ou obter mais informações sobre como montar uma Regex.
 
-## [Projeto final](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/Regex)
+## [Projeto final](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Regex/Project-Regex)
 
 ## Parametros comuns
 - **\\** = início da Regex OU sinaliza que o caracter a seguir é literal

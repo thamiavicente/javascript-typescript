@@ -1,6 +1,6 @@
 # Testes
 
-## [Projeto final](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/TDD-e-BDD)
+## [Projeto final](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Testes-em-Javascript/Project-TDD-e-BDD)
 
 ## Instruções
 Para rodar os testes presentes nesse projeto, basta fazer o clone do repositório e rodar o comando especificado no tópico.
@@ -52,7 +52,7 @@ Mocks são objetos ou funções que simulam comportamentos de dependências reai
 
 No exemplo a seguir, temos uma função que recebe um arquivo e valida seu conteúdo. Nesse momento não precisamos testar as unidades de recebimento ou upload de arquivos, apenas se nosso código está validando o conteúdo corretamente.
 
-##### **[Exemplo de mocks](https://github.com/thamiavicente/js-expert/tree/main/Testes-em-Javascript/1-Mocks)**
+##### **[Exemplo de mocks](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Testes-em-Javascript/Tipos-de-Testes/1-Mocks)**
 
 #### Stubs
 Um stub é um pedaço de código que substitui uma dependência externa do código que está sendo testado, como por exemplo os dados de uma API. Ele é usado para fornecer respostas pré-definidas a chamadas feitas pelo código em teste, permitindo isolar e testar o comportamento da unidade com base nesses dados controlados.
@@ -61,14 +61,14 @@ O stub e o mock podem parecer a mesma coisa, mas, diferente do mock, o stub é u
 
 A baixo você pode acessar um exemplo de stub, usado para testar o tratamento dos dados recebidos da API. Como os dados são mockados, não é preciso fazer requisição para a API para ter certeza que o tratamento de dados está funcionando corretamente.
 
-##### **[Exemplo de stubs](https://github.com/thamiavicente/js-expert/tree/main/Testes-em-Javascript/2-Stubs)**
+##### **[Exemplo de stubs](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Testes-em-Javascript/Tipos-de-Testes/2-Stubs)**
 
 #### Spies
 Um outro conceito importante nos testes unitários são os spies. Os spies permitem observar o comportamento de funções ou métodos durante a execução dos testes, focando não no resultado final, mas sim no processo de execução. Com eles, é possível verificar, por exemplo, quantas vezes uma função foi chamada, quais argumentos ela recebeu e quais valores retornou.
 
 Abaixo temos um exemplo de spy, onde um método da classe Fibonacci é monitorado para validar seu comportamento durante a execução.
 
-##### **[Exemplo de spies](https://github.com/thamiavicente/js-expert/tree/main/Testes-em-Javascript/3-Spies)**
+##### **[Exemplo de spies](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Testes-em-Javascript/Tipos-de-Testes/3-Spies)**
 
 ### Testes end-to-end
 Testes end-to-end, ou E2E, são usados para verificar o funcionamento do projeto do ponto de vista do usuário final. Eles validam se todas as funcionalidades, desde o back-end até o front-end, estão operando conforme o esperado, simulando interações reais.
@@ -100,4 +100,5 @@ Essa prática facilita a colaboração, garantindo que o software faça o que o 
 
 ## Referências:
 [What’s the difference between Unit Testing, TDD and BDD?](https://codeutopia.net/blog/2015/03/01/unit-testing-tdd-and-bdd/)
+
 [5 step method to make test-driven development and unit testing easy](https://codeutopia.net/blog/2016/10/10/5-step-method-to-make-test-driven-development-and-unit-testing-easy/)

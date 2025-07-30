@@ -1,6 +1,6 @@
 # Ciclos de Vida do Javascript
 
-## [Projeto final](https://github.com/thamiavicente/javascript-typescript/blob/main/Projetos/ESModules)
+## [Projeto final](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/ECMAScript/Project-ESModules)
 
 ## Strict Mode
 É um script para aplicar a variação mais restritiva do Javascript, que elimina erros silenciosos, ajusta erros que podem dificultar o processamento do código pelos motores Javascript e previne o uso de sintaxe reservada.
