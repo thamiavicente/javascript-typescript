@@ -6,12 +6,13 @@ Você pode usar o site [Regex 101](https://regex101.com/) para validar suas Rege
 
 ## Parametros comuns
 - **\\** = início da Regex OU sinaliza que o caracter a seguir é literal
-- **d** = dígito de 0 a 9
 - **{}** = quantificador `//{2} = pega 2 caracteres`
 - **^** = indica o início da linha
 - **$** = indica o final da linha para não pegar a próxima
 - **[]** = pega os caracteres que são iguais aos dentro do colchete `//[-] pega todos os "-"`
+- **d** = dígito de 0 a 9
 - **w** = qualquer caracter que seja número ou letra [a-zA-Z0-9]
+- **D & W** = indicam o contrário de d e w, ou seja, "D" é tudo que não é dígito e "W" é tudo que não é número ou letra
 - **+** = seleciona de 1 a infinito caracter que dê match com o padrão passado
 - **\s** = seleciona os espaços [\r\n\t\f\v]
 - **()** = agrupa a seleção
