@@ -53,6 +53,7 @@ Para rodar os testes presentes nesse projeto, basta fazer o clone do repositóri
 |[ipt](https://github.com/ruyadorno/ipt)|3|
 |[pdf paser](https://gitlab.com/autokent/pdf-parse)|1|
 |[safe regex](https://github.com/davisjam/safe-regex)|2|
+|[rewiremock](https://github.com/theKashey/rewiremock#readme)|3|
 
 ## Conclusão
 
