@@ -1,7 +1,7 @@
 # Javascript & Typescript
 
 ## Introdução
-Este projeto tem por finalidade compilar e compartilhar o aprendizado obtido no curso "JS Expert", ministrado por Erick Wendel, mas como considero este repositório meu compilado de aprendizagem, também incluí (e seguirei incluindo) conceitos que não foram vistos no curso, como todo o conteúdo relacionado a TypeScript.
+Este projeto tem por finalidade compilar e compartilhar o aprendizado obtido no curso "JS Expert", ministrado por Erick Wendel, mas como considero este repositório meu compilado de aprendizagem, também incluí (e seguirei incluindo) conceitos que aprendi em outros cursos e estudos, como na graduação de Engenharia de Software da Faculdade Descomplica.
 
 Entenda mais sobre testes, ciclos de vida, regex e muito mais, de forma resumida, organizada e com exemplos práticos para facilitar seus estudos de JavaScript e TypeScript. Além disso, você encontra meu caderno de anotações reunindo conhecimentos importantes sobre a linguagem de forma resumida e prática, servindo como guia para quem quer aprender mais sobre JavaScript, mas não sabe por onde começar. M
 
@@ -18,16 +18,18 @@ Caso queira deixar um feedback, fique a vontade para usar a aba de issues.
 - [Instruções](#instruções)
 - [Bibliotecas e dependências](#bibliotecas-e-dependências)
 - [Conceitos](https://github.com/thamiavicente/javascript-typescript/blob/main/Conceitos)
-- Capítulos do curso:
+- Capítulos:
     - [Testes em Javascript](https://github.com/thamiavicente/javascript-typescript/blob/main/Capitulos-do-curso/Testes-em-Javascript)
     - [Ciclos de vida do Javascript](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Ciclos-de-Vida)
     - [Advanced Javascript Data Types](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Advanced-Javascript-Data-Types)
     - [Regex](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Regex)
     - [ECMA Script](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/ECMAScript)
+    - [Arquitetura e Boas Práticas](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Arquitetura-e-Boas-Praticas)
 - Projetos:
     - [TDD e BDD](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Testes-em-Javascript/Project-TDD-e-BDD)
     - [ES Modules](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/ECMAScript/Project-ESModules)
     - [Regex](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Regex/Project-Regex)
+    - [Factory](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Arquitetura-e-Boas-Praticas/creational/factory)
 - [Typescript](https://github.com/thamiavicente/javascript-typescript/blob/main/Typescript)
 - [Conclusão](#conclusão)
 - [Certificado](#certificado)

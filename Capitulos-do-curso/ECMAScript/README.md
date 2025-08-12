@@ -1,5 +1,7 @@
 # ECMAScript
 
+## [Projeto final](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/ECMAScript/Project-ESModules)
+
 ## ES Modules
 São o sistema de módulos oficial do JavaScript, introduzido no ES6, permitindo importar e exportar código entre arquivos usando import e export, facilitando a organização, reutilização e otimização de projetos em JavaScript.
 
