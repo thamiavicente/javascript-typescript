@@ -25,17 +25,37 @@ class Database {
 ```
 
 ### Factory Method
-Delega a criação de objetos para subclasses.
+Abstrai a instanciação de objetos, centralizando a criação em uma única classe (a "fábrica"), de forma a reduzir acoplamento, evitar repetição de código e facilitar a manutenção.
+
+#### Connection Factory
+Pode ser usada para criar conexões com o banco de dados sem expor os detalhes de configuração (como URL, usuário, senha, etc.).
 ```javascript
-interface Animal { void falar(); }  
-class Cachorro implements Animal { void falar() { System.out.println("Au au!"); } }  
-class AnimalFactory {  
-    Animal criarAnimal(String tipo) {  
-        if (tipo.equals("cachorro")) return new Cachorro();  
-        // ...  
-    }  
+class ConnectionFactory {
+  static getConnection(databaseType) {
+    switch (databaseType) {
+      case "MySQL":
+        return { connect: () => console.log("Conectado ao MySQL") };
+      case "PostgreSQL":
+        return { connect: () => console.log("Conectado ao PostgreSQL") };
+      default:
+        throw new Error("Banco de dados não suportado.");
+    }
+  }
 }
+
+// Uso:
+const mysqlConnection = ConnectionFactory.getConnection("MySQL");
+mysqlConnection.connect(); // Saída: "Conectado ao MySQL"
+
+const postgresConnection = ConnectionFactory.getConnection("PostgreSQL");
+postgresConnection.connect(); // Saída: "Conectado ao PostgreSQL"
 ```
+
+#### Divisão em Camadas
+A `factory` pode ser usada em conjunto com a arquitetura de `N` camadas, assim como no [exemplo de Factory](https://github.com/thamiavicente/javascript-typescript/tree/main/Capitulos-do-curso/Design%20Pattern/creational/factory), onde há as seguintes camadas:
+- **Repository:** Camada de acesso a dados (operações como save, findById, delete).
+- **Service:** Camada de regras de negócio (cálculos, validações, decisões).
+- **Dependency Injection (Injeção de Dependência)**: Padrão onde as dependências são fornecidas externamente (ex: via construtor).
 
 ### Builder
 O Builder é um padrão de projeto criacional que tem como objetivo separar a construção de um objeto complexo da sua representação, permitindo que o mesmo processo de construção possa criar diferentes representações.
@@ -226,4 +246,4 @@ class PedidoService {
 ```  
 
 ## Clean Code
-Conjunto de práticas para escrever código legível, mantível e eficiente.
+Conjunto de práticas para escrever código legível, mantenível e eficiente.
