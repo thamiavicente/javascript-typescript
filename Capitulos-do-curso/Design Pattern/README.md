@@ -138,20 +138,62 @@ Subtipos:
 
 ### Observer
 Notifica objetos sobre mudanças em outro objeto.  
-  ```java  
-  class Sensor {  
-      private List<Observer> observers = new ArrayList<>();  
-      void addObserver(Observer o) { observers.add(o); }  
-      void notificar() { for (Observer o : observers) o.update(); }  
+```javascript
+  class Observer {
+    update() {
+      throw new Error("Método update() deve ser implementado");
+    }
+  }
+
+  class Sensor { 
+    #observers = []
+
+    addObserver(observer) {
+      this.#observers.push(observer)
+    }
+
+    notify() {
+      this.#observers.forEach((o) => o.update() )
+    }
   }  
-  ```
+```
 ### Strategy
 Define uma família de algoritmos intercambiáveis.  
-  ```java  
-  interface PagamentoStrategy { void pagar(); }  
-  class CartaoCredito implements PagamentoStrategy { void pagar() { ... } }  
-  class PayPal implements PagamentoStrategy { void pagar() { ... } }  
-  ```  
+```javascript
+  interface class PagamentoStrategy {
+    pagar()
+  }  
+  
+  class CartaoCredito extends PagamentoStrategy {
+    pagar(valor) {
+      console.log(`Pagando R$${valor} via Cartão de Crédito`);
+    }
+  }
+
+  class CartaoDebito extends PagamentoStrategy {
+    pagar(valor) {
+      console.log(`Pagando R$${valor} via Cartão de Débito`);
+    }
+  }
+
+  class Loja {
+    constructor(estrategiaPagamento) {
+      this.estrategiaPagamento = estrategiaPagamento;
+    }
+
+    finalizarCompra(valor) {
+      this.estrategiaPagamento.pagar(valor);
+    }
+  }
+
+  // Uso
+  const loja = new Loja(new CartaoCredito());
+  loja.finalizarCompra(100); // Saída: "Pagando R$100 via Cartão de Crédito"
+
+  // Troca de estratégia dinamicamente
+  loja.estrategiaPagamento = new PayPal();
+  loja.finalizarCompra(50); // Saída: "Pagando R$50 via PayPal"
+```
 
 ## Anti-pattern
 São "soluções" que parecem boas à primeira vista, mas geram complexidade desnecessária, débito técnico ou ineficiência.  
@@ -174,13 +216,18 @@ Uma classe deve ter apenas um motivo para mudar, que pode ser traduzido como: ca
 ```javascript
 // Ruim: Uma classe fazendo duas coisas (gerenciar usuário + enviar e-mail)  
 class Usuario {  
-    void salvarUsuario() { ... }  
-    void enviarEmail() { ... }  
+    salvarUsuario() { ... }  
+    enviarEmail() { ... }  
 }  
 
 // Bom: Separar responsabilidades  
-class Usuario { void salvarUsuario() { ... } }  
-class EmailService { void enviarEmail() { ... } }  
+class Usuario {
+    salvarUsuario() { ... }
+}
+
+class EmailService {
+    enviarEmail() { ... }
+}  
 ```
 
 ### Open/Closed Principle
@@ -188,14 +235,22 @@ Entidades devem ser abertas para extensão, mas fechadas para modificação, sou
 ```javascript  
 // Ruim: Modificar a classe para adicionar novas formas  
 class CalculadoraArea {  
-    double calcularArea(Quadrado q) { ... }  
+    calcularArea(quadrado) { ... }  
     // Adicionar novo método para Círculo → Quebra OCP!  
 }  
 
 // Bom: Usar interface (aberto para extensão)  
-interface Forma { double calcularArea(); }  
-class Quadrado implements Forma { ... }  
-class Circulo implements Forma { ... }  
+interface Forma { 
+    calcularArea()
+}
+
+class Quadrado implements Forma { 
+    calcularArea() { ... }
+}
+
+class Circulo implements Forma{ 
+    calcularArea() { ... }
+}
 ```
 
 ### Liskov Substitution Principle
@@ -203,15 +258,15 @@ Classes filhas devem poder substituir classes pai sem quebrar o sistema, sendo a
 ```javascript 
 // Ruim: Pato de borracha "quebra" o comportamento de Pato  
 class Pato {  
-    void voar() { ... }  
+    voar() { ... }
 }  
 class PatoDeBorracha extends Pato {  
-    void voar() { throw new Error("Não voa!"); } // Viola LSP!  
+    voar() { throw new Error("Não voa!"); } // Viola LSP!  
 }  
 
 // Bom: Criar hierarquias coerentes  
-class PatoVoador extends Pato { void voar() { ... } }  
-class PatoDeBorracha extends Pato { void voar() { /* nada */ } }  
+class PatoVoador extends Pato { voar() { ... } }  
+class PatoDeBorracha extends Pato { voar() { /* nada */ } }  
 ```  
 
 ### Interface Segregation Principle
@@ -219,13 +274,13 @@ Clientes não devem ser forçados a depender de interfaces que não usam, então
 ```javascript
 // Ruim: Interface "gordura"  
 interface Animal {  
-    void comer();  
-    void voar(); // Pinguim não voa!  
+    comer();  
+    voar(); // Pinguim não voa!  
 }  
 
 // Bom: Interfaces específicas  
-interface Animal { void comer(); }  
-interface Voador { void voar(); }  
+interface Animal { comer(); }  
+interface Voador { voar(); }  
 class Pinguim implements Animal { ... }  
 class Aguia implements Animal, Voador { ... }  
 ```  
@@ -235,13 +290,13 @@ Dependa de abstrações, não de implementações concretas, para isso, use inte
 ```javascript
 // Ruim: Classe depende de MySQL diretamente  
 class PedidoService {  
-    private MySQLDatabase db; // Acoplamento alto!  
+    #db: mySQLDatabase; // Acoplamento alto!  
 }  
 
 // Bom: Depender de uma abstração  
-interface Database { void salvar(); }  
+interface Database { salvar(); }  
 class PedidoService {  
-    private Database db; // Pode ser MySQL, Oracle, etc.  
+    #db: Database; // Pode ser MySQL, Oracle, etc.  
 }  
 ```  
 
