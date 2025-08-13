@@ -1,5 +1,35 @@
 # Fundamentos
 
+## Exceções
+São eventos inesperados que podem ocorrer durante a execução do código e, se não tratados corretamente, podem interromper a aplicação. Diferenciam-se de `erros` por serem recuperáveis (podem ser capturados e tratados), enquanto erros são geralmente irrecuperáveis (ex.: falta de memória).
+
+### Propriedades
+- **Tipo:** classe/identificação da exceção (ex.: `TypeError`).  
+- **Mensagem:** descrição legível do problema.  
+- **Causa:** motivo da exceção existir
+- **Stack Trace (localização):** pilha de chamadas (métodos que foram executados) até o ponto do erro.  
+- **Propagação:** sobe pela pilha de chamadas até ser tratada ou a exceção ser interrompida 
+  
+### Encapsulamento em OOP
+É possível criar o encapsulamento de exceções, permitindo o controle do tratamento da exceção assim como a escolha de como e onde ela será mostrada.
+
+#### Características
+- **Abstração de detalhes:** exibir mensagens amigáveis ao usuário, mantendo os detalhes técnicos visíveis apenas para os desenvolvedores 
+- **Facilidade de manutenção:** com o tratamento centralizado é possível evitar a duplicidade de código e facilitando o gerenciamento de exceções (ex.: classe `ErrorHandler`)
+- **Comunicação de alto nível:** tratar a exceção em camadas mais baixas, permitindo que somente as informações essenciais subam para os mais altos níveis
+- **Segurança:** evitar vazamento de informações sensíveis (ex.: exibição de stack traces em produção).  
+
+#### JavaScript (try-catch)
+Permite que o código execute normalmente em caso de não haver exceção (try) e possa executar o tratamento da exceção caso uma exceção apareça (catch).
+
+```javascript
+try {
+  // Código que pode lançar exceção  
+} catch (error) {
+  console.error("Mensagem amigável:", error.message); // Tratamento  
+}
+```
+
 ## SOLID
 É um conjunto de 5 princípios de design de software que, quando aplicados, melhoram a arquitetura, flexibilidade, manutenção e clareza do código.
 Alguns benefícios do SOLID são:
